@@ -1,0 +1,7 @@
+{
+  "rss": {
+    "sources": "Sources",
+    "all": "All Articles",
+    "posted": "Posted {{date}}"
+  }
+}

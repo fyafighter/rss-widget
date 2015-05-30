@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="small-12 medium-3 column">
+    <h3>{{'rss.sources' | translate}}</h3>
+    <ul class="side-nav">
+      <li>
+        <a ng-click="vm.getAllPosts()" href="" ng-class="{'active':currentFeed === null}">
+          <div ><strong>{{'rss.all' | translate}}</strong> <span class="right text-right">{{vm.getAllPostsCount()}}</span></div>
+        </a>
+      </li>
+      <li ng-repeat="feed in vm.feeds">
+        <a ng-click="vm.getPosts(feed)" href="" ng-class="{'active':currentFeed === feed}">
+          <div ><strong>{{feed.name}}</strong> <span class="right text-right">{{feed.count}}</span></div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="small-12 medium-9 column">
+    <div ng-repeat="post in vm.posts" ng-if="vm.posts.length > 0">
+      <div class="row">
+        <div ng-if="post.image && post.image.url" class="small-3 column">
+          <div class="box">
+            <div class="box-content">
+              <div ng-if="post.image.url" class="box-image" ng-style="{'background-image': 'url(' + post.image.url + ')' }"></div>
+            </div>
+          </div>
+        </div>
+        <div class="column" ng-class="(post.image && post.image.url) ? 'small-9': 'small-12'">
+          <h4><strong>{{post.source.name}}</strong></h4>
+          <h3 class=""><a ng-href="{{post.link}}" target="_blank">{{post.title}}</a></h3>
+          <div ng-bind-html="post.description"></div>
+          <h5><small  translate="rss.posted" translate-values="{date: post.relativeDate}"></small></h5>
+        </div>
+      </div>
+      <hr ng-if="!$last"/>
+    </div>
+  </div>
+</div>

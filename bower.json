@@ -10,7 +10,7 @@
     "angular-ui-router": "^0.2.11",
     "sugar": "~1.4.1",
     "propel-layout": "git+http://ftct0033g.fc.usa.hp.com:7990/scm/ccue/propel-layout.git#develop",
-    "propel-error": "git+http://ftct0033g.fc.usa.hp.com:7990/scm/ccom/propel-error.git#v0.0.2",
+    "propel-error": "git+https://github.com/fyafighter/propel-error.git",
     "angular-moment": "~0.10.1",
     "angular-sanitize": "~1.3.15"
   },

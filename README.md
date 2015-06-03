@@ -8,3 +8,34 @@ require('@propel/gulp-jumpstart-archiver')();
 gulp.task('default', ['serve']);
 
 
+
+endpoints.json
+
+  {
+    "name": "rss",
+    "role": [],
+    "label": "endpoint.launchpad",
+    "icon": "assets/propel-endpoints/images/app-news.png",
+    "url": {
+      "ui": "http://localhost:9000/rss"
+    }
+  }
+
+app.json
+
+  "rss": {
+    "mount": "/api",
+    "rssConfigDir": "conf/",
+    "rssConfig": "rss.json",
+    "rssConfigOrg": "rss.{orgName}.json"
+  },
+
+  endpoints.json
+
+            {
+            "id": "dashboard-tile_rss",
+            "label": "Hot News",
+            "role": ["SERVICE_CONSUMER"],
+            "backgroundImage": "assets/propel-endpoints/images/app-news.png",
+            "link": "http://localhost:9000/rss"
+          },

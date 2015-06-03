@@ -39,3 +39,13 @@ app.json
             "backgroundImage": "assets/propel-endpoints/images/app-news.png",
             "link": "http://localhost:9000/rss"
           },
+
+
+
+ rss.json
+
+ [
+  "http://rss.cnn.com/rss/cnn_topstories.rss",
+  "http://sports.espn.go.com/espn/rss/news"
+]
+
